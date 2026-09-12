@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>كبسولة المستقبل 2027 | اليوم الوطني السعودي</title>
+<style>
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: #050b07;
+background-image:
+linear-gradient(rgba(0, 255, 100, 0.1) 2px, transparent 2px),
+linear-gradient(90deg, rgba(0, 255, 100, 0.1) 2px, transparent 2px);
+background-size: 50px 50px;
+animation: moveGrid 6s linear infinite;
+color: #fff;
+margin: 0;
+padding: 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+overflow: hidden;
+}
+
+@keyframes moveGrid {
+0% {
+background-position: 0 0;
+}
+100% {
+background-position: 50px 50px;
+}
+}
+
+.container {
+background: rgba(5, 20, 10, 0.92);
+backdrop-filter: blur(12px);
+border: 1px solid rgba(0, 230, 118, 0.5);
+color: #fff;
+padding: 40px;
+border-radius: 20px;
+box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 25px rgba(0, 230, 118, 0.2);
+text-align: center;
+max-width: 600px;
+width: 90%;
+z-index: 2;
+}
+h1 {
+color: #00e676;
+margin-bottom: 15px;
+font-size: 28px;
+letter-spacing: 1px;
+text-shadow: 0 0 12px rgba(0, 230, 118, 0.5);
+}
+p {
+color: #b0bec5;
+line-height: 1.8;
+margin-bottom: 30px;
+font-size: 16px;
+}
+.btn {
+background: linear-gradient(135deg, #00e676, #00c853);
+color: #050b07;
+padding: 14px 35px;
+text-decoration: none;
+border-radius: 30px;
+font-weight: bold;
+font-size: 18px;
+box-shadow: 0 6px 20px rgba(0, 230, 118, 0.4);
+transition: all 0.3s ease;
+display: inline-block;
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.btn:hover {
+background: linear-gradient(135deg, #00c853, #009624);
+color: #fff;
+transform: translateY(-3px);
+box-shadow: 0 8px 25px rgba(0, 230, 118, 0.7);
+}
+.footer {
+margin-top: 25px;
+font-size: 13px;
+color: #78909c;
+letter-spacing: 0.5px;
+z-index: 2;
+}
+</style>
+</head>
+<body>
+
+<div class="container" id="capsule-container">
+<h1>كبسولة المستقبل 2027</h1>
+<div id="content-area">
+<p>أهلاً بك في رحلة نحو المستقبل! اكتب رسالة لنفسك أو لوطنك الحبيب، عبّر فيها عن طموحاتك وأحلامك لتراها بنفسك في اليوم الوطني لعام 2027.<br><strong style="color: #00e676;">ملاحظة:</strong> لن تُفتح هذه الكبسولة إلا في تاريخ 23 سبتمبر 2027 بإذن الله.</p>
+
+<!-- رابط نموذج جوجل الخاص بك -->
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSc4cM9z6s01VtG4YxYGQqhKM9NPqEArc5FrTPEgKicZd2xVnA/viewform?usp=header" target="_blank" class="btn" id="action-btn">اكتب رسالتك الآن</a>
+</div>
+</div>
+
+<div class="footer">
+نحلم ونحقق | اليوم الوطني السعودي
+</div>
+
+<script>
+// تحديد التواريخ المطلوبة
+const currentDate = new Date();
+const lockStartDate = new Date("2026-09-25T00:00:00"); // بداية الإغلاق في 25 سبتمبر 2026
+const unlockDate = new Date("2027-09-23T00:00:00"); // موعد الفتح النهائي في 23 سبتمبر 2027
+
+const contentArea = document.getElementById("content-area");
+
+if (currentDate >= lockStartDate && currentDate < unlockDate) {
+// في الفترة من 25 سبتمبر 2026 إلى قبل 23 سبتمبر 2027 (الكبسولة مقفلة)
+contentArea.innerHTML = `
+<p style="color: #ff5252; font-size: 18px; font-weight: bold;">عذراً، لقد تم إغلاق استقبال الرسائل في الكبسولة الزمنية بنجاح.</p>
+<p>تم قفل الرابط ولن يتم فتح الكبسولة وعرض المحتوى إلا في اليوم الوطني بتاريخ <strong style="color: #00e676;">23 سبتمبر 2027</strong> بإذن الله.</p>
+`;
+} else if (currentDate >= unlockDate) {
+// بعد تاريخ 23 سبتمبر 2027 (الكبسولة مفتوحة)
+contentArea.innerHTML = `
+<p style="color: #00e676; font-size: 18px; font-weight: bold;">لقد حان اللقاء! فتحت كبسولة المستقبل 2027 أبوابها.</p>
+<p>استمتع برؤية طموحاتك وأحلامك التي دونتها سابقاً.</p>
+<!-- يمكنك هنا تغيير الرابط إلى صفحة النتائج أو الأرشيف لاحقاً -->
+<a href="#" class="btn">عرض محتوى الكبسولة</a>
+`;
+}
+// إذا كان التاريخ قبل 25 سبتمبر 2026، ستعمل الصفحة بشكل طبيعي تماماً كما صممتها.
+</script>
+
+</body>
+</html>
